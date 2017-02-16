@@ -1,6 +1,6 @@
 {
   "name": "nezha-cli",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "cli tool for front end project",
   "main": "lib/nezha.js",
   "scripts": {
@@ -22,5 +22,18 @@
     "inquirer": "^3.0.1",
     "mkdirp": "^0.5.1",
     "moment": "^2.17.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shangsinian/nezha-cli.git"
+  },
+  "keywords": [
+    "nezha",
+    "tauri",
+    "cli"
+  ],
+  "bugs": {
+    "url": "https://github.com/shangsinian/nezha-cli/issues"
+  },
+  "homepage": "https://github.com/shangsinian/nezha-cli#readme"
 }
