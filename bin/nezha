@@ -1,0 +1,37 @@
+#!/usr/bin/env node
+
+/**
+ * NEZHA
+ *
+ * Options:
+ *   -V, --version        显示版本
+ *   -h, --help           打印帮助信息
+ *   -i, --info           显示 nezha 信息
+ *   -u, --update         更新 nezha
+ */
+
+'use strict'
+
+const chalk = require('chalk')
+
+// Node 版本检测
+if (String(process.versions.node).localeCompare('4.2.4') < 0) {
+  console.log(chalk.yellow('[!] 检测到你的 node 版本过低 (v%s), 请升级你的 node 版本为 4.2.4 (LTS) 以上'), process.versions.node)
+  console.log(chalk.yellow('[!] 升级地址: https://nodejs.org/'))
+  console.log()
+  process.exit(0)
+}
+
+const co = require('co')
+const logger = require('../lib/logger')('nezha-bin')
+const Nezha = require('../lib/nezha')
+
+// 命令行入口主流程
+co(function * () {
+  let nezha = new Nezha()
+  yield nezha.run()
+}).catch(err => {
+  logger.error('出现错误: %s', err.stack || err)
+
+  console.log('\n如问题无法处理, 请提交 ISSUE:\n-> \n')
+})
