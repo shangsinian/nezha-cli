@@ -25,6 +25,7 @@ if (String(process.versions.node).localeCompare('4.2.4') < 0) {
 const co = require('co')
 const logger = require('../lib/logger')('nezha-bin')
 const Nezha = require('../lib/nezha')
+require('shelljs/global');
 
 // 命令行入口主流程
 co(function * () {
