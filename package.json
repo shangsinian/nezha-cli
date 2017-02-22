@@ -1,6 +1,6 @@
 {
   "name": "nezha-cli",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "cli tool for front end project",
   "main": "lib/nezha.js",
   "scripts": {
@@ -49,6 +49,8 @@
     "serve-static": "^1.11.2",
     "shelljs": "^0.7.6",
     "style-loader": "^0.13.1",
+    "superagent": "^3.4.4",
+    "superagent-promise": "^1.1.0",
     "url-loader": "^0.5.7",
     "webpack": "^2.2.1",
     "webpack-dev-middleware": "^1.10.0",

@@ -24,15 +24,17 @@ if (String(process.versions.node).localeCompare('4.2.4') < 0) {
 
 const co = require('co')
 const logger = require('../lib/logger')('nezha-bin')
+const utils = require('../lib/utils')
 const Nezha = require('../lib/nezha')
 require('shelljs/global');
 
 // 命令行入口主流程
 co(function * () {
   let nezha = new Nezha()
+  yield utils.checkUpdate()
   yield nezha.run()
 }).catch(err => {
   logger.error('出现错误: %s', err.stack || err)
 
-  console.log('\n如问题无法处理, 请提交 ISSUE:\n-> \n')
+  logger.warning('\n如问题无法处理, 请联系 shangsinian@hotmail.com\n-> \n')
 })
