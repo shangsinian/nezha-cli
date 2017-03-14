@@ -1,0 +1,19 @@
+{
+  "name": "antd-dva-template",
+  "version": "1.0.0",
+  "description": "Here is your project's description",
+  "scripts": {},
+  "author": "author name",
+  "license": "ISC",
+  "dependencies": {
+    "antd": "^2.7.1",
+    "babel-polyfill": "^6.23.0",
+    "dva": "^1.2.1",
+    "react": "~15.3.1",
+    "react-dom": "~15.3.1",
+    "react-redux": "~4.4.5",
+    "redux": "~3.5.0",
+    "superagent": "^3.4.4",
+    "superagent-promise": "^1.1.0"
+  }
+}
